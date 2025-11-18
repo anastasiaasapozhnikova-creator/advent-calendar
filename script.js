@@ -25,7 +25,17 @@ const notes = {
     24: "Merry Christmas, my love 🎄❤️"
 };
 
-// Shuffle numbers
+// Colors extracted from your picture
+const colors = [
+    "#c62b2b",  // red
+    "#a71e1e",  // dark red
+    "#2f6f40",  // green
+    "#1f472a",  // dark green
+    "#f7c84a",  // yellow
+    "#e9a437",  // orange-yellow
+];
+
+// Shuffle 1–24
 const numbers = Array.from({ length: 24 }, (_, i) => i + 1)
     .sort(() => Math.random() - 0.5);
 
@@ -35,7 +45,10 @@ numbers.forEach(num => {
     const div = document.createElement("div");
     div.className = "box";
     div.textContent = num;
-    
+
+    // Assign random festive color
+    div.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
     div.addEventListener("click", () => openPopup(num));
     calendar.appendChild(div);
 });

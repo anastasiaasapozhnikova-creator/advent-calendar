@@ -7,8 +7,9 @@ body {
 
 .title {
     margin-top: 20px;
-    color: #b30000;
+    color: #c62b2b;
     font-size: 32px;
+    font-weight: bold;
 }
 
 .calendar {
@@ -21,20 +22,24 @@ body {
 }
 
 .box {
-    background: #d62828;
     color: white;
     padding: 25px 0;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box:hover {
     transform: scale(1.06);
+    opacity: 0.95;
 }
 
+/* POPUP */
 .popup {
     position: fixed;
     left: 0;
